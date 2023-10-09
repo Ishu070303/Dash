@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { BiLogoDiscord } from 'react-icons/bi';
+import { auth, provider } from './firebase';
+import { signInWithPopup } from 'firebase/auth';
 
 import google from '../images/google.png';
 import apple from '../images/apple.png';
+import Dashboard  from '../pages/Dashboard';
+
 
 const LoginPage = () => {
+  const [value, setValue] = useState('');
+  const handleClick = () => {
+   signInWithPopup(auth, provider).then((data) => {
+    setValue(data.user.email);
+    localStorage.setItem("email", data.user.email)
+   });
+  }
+  useEffect(() => {
+    setValue(localStorage.getItem("email"))
+  })
+
   return (
    <>
    <div className='flex flex-row'>
-      <div className='basis-1/2 bg-[#4285F4] h-screen flex justify-center'>
+      <div className='basis-1/2 bg-[#4285F4] h-screen flex justify-center left-side'>
         <div className='w-[90%] h-[90%] m-auto'>
         <h4 style={{fontFamily: 'Poppins'}} className='text-2xl font-bold text-white'>LOGO</h4>
         <div className='flex justify-center mt-56'>
@@ -23,7 +38,7 @@ const LoginPage = () => {
         </div>
         </div>
       </div>
-      <div className='basis-1/2 flex justify-center'>
+      <div className='basis-1/2 flex justify-center' >
         <div className='w-96 m-auto'>
         <div>
             <h3 style={{ fontFamily: 'Montserrat'}} className='text-3xl font-bold'>Sign In</h3>
@@ -31,13 +46,14 @@ const LoginPage = () => {
             <div className='flex gap-x-5'>
                 <div className='flex items-center w-48 justify-evenly p-1'>
                   <img src={google} alt='google' className='w-3 h-3'  />
+                 { value ? <Dashboard /> : 
                   <button style = {{fontFamily: 'Montserrat'}} className='text-xs font-normal text-neutral-400'>
                     Sign In with Google
-                  </button>
+                  </button>}
                 </div>
                 <div className='flex items-center w-48 justify-evenly p-1'>
                   <img src={apple} alt='apple' className='w-3 h-3'  />
-                  <button style = {{fontFamily: 'Montserrat'}} className='text-xs font-normal text-neutral-400'>
+                  <button style = {{fontFamily: 'Montserrat'}} className='text-xs font-normal text-neutral-400' onClick={handleClick}>
                     Sign in with apple
                   </button>
                 </div>
