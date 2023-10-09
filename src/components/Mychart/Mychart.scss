@@ -1,0 +1,23 @@
+.chart-div {
+  position: relative;
+  border: 2px solid black;
+  width: 100vw;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #e0e0e0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.text {
+  display: flex;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.series {
+    width: 5px;
+}

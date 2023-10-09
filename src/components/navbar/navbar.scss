@@ -1,0 +1,103 @@
+.navbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  padding: 20px;
+  z-index: 1;
+  margin-top: 4rem;
+  // border: 2px solid black;
+  .wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    //   justify-content: flex-end;
+    justify-content: space-between;
+    //   border: 2px solid black;
+
+    .heading {
+      display: flex;
+      width: 20%;
+      // border: 2px solid black;
+      justify-content: space-between;
+      color: black;
+      font-family: "Montserrat", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      // margin-left: 0;
+    }
+
+    .items {
+      display: flex;
+      // border: 2px solid black;
+      .search {
+        display: flex;
+        align-items: center;
+        //border: 0.5px solid lightgray;
+        z-index: -1;
+        padding: 3px;
+        background-color: white;
+        border-radius: 20px;
+
+        input {
+          border: none;
+          outline: none;
+          background: white;
+          color: #b0b0b0;
+
+          &::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Lato";
+            padding-left: 20px;
+          }
+        }
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+
+        .icon {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  input {
+    display: none;
+  }
+  .navbar {
+    margin-top: 0.2rem;
+  }
+}
