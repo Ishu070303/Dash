@@ -51,7 +51,7 @@ export default function ProfileSection() {
             style={{
               display: "flex",
               marginLeft: "2rem",
-              width: "110%",
+              width: "90%",
               justifyContent: "space-between",
               marginTop: "1rem",
             }}
@@ -62,6 +62,7 @@ export default function ProfileSection() {
                 textAlign: "center",
                 height: "30%",
                 width: "40%",
+                border: '2px solid black'
               }}
             >
               <FaWhatsapp
@@ -71,7 +72,8 @@ export default function ProfileSection() {
               <h5 className="addpich5">{basicDetails.number}</h5>
             </div>
             <div
-              style={{ display: "flex", textAlign: "center", height: "30%" }}
+              style={{ display: "flex", textAlign: "center", height: "30%",  border: '2px solid black' }}
+              
             >
               <BsInstagram
                 className="icnic"
@@ -84,7 +86,7 @@ export default function ProfileSection() {
             style={{
               display: "flex",
               marginLeft: "2rem",
-              width: "110%",
+              width: "80%",
               justifyContent: "space-between",
               marginTop: "2rem",
             }}
@@ -103,7 +105,7 @@ export default function ProfileSection() {
             >
               <AiOutlineYoutube
                 className="icnic"
-                style={{ background: "#FFE9E9", color: "#FF0000" }}
+                style={{ background: "#FFE9E9", color: "#FF0000"}}
               />
               <h5 className="addpich5">{contactDetails.youtube}</h5>
             </div>

@@ -67,6 +67,9 @@ const Widget = ({ item }) => {
           {data?.isMoney && "$"} {item.value}
         </span>
       </div>
+      <div className="widgetdiv">
+       <div className="widgeth6">+2.1%</div>
+      </div>
     </div>
   );
 };

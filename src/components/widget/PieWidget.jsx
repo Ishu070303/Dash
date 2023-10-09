@@ -25,9 +25,14 @@ const data = {
       plotOptions: {
         pie: {
           donut: {
-            size: '80%', // Control the size of the donut hole
+            size: '80%',
+            radius: '40%' // Control the size of the donut hole
           },
+          rounded: true
         },
+      },
+      stroke: {
+        width: 0
       },
       colors: ['#98D89E', '#F6DC7D', '#EE8484'],
       labels: ['Basic Tree', 'Custom Hot Pant', 'Super Hoodie'],

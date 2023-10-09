@@ -16,11 +16,15 @@ const Mychart = () => {
       plotOptions: {
         bar: {
           columnWidth: "30%",
-          style: {},
           borderRadius: 3,
           barPercentage: 100,
         },
       },
+
+      stroke: {
+        colors: ["transparent"],
+        width: 5
+      }
     },
 
     series: [
