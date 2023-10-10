@@ -3,6 +3,7 @@ import "./navbar.scss";
 import { AiOutlineSearch, AiOutlineBell } from "react-icons/ai";
 
 const Navbar = () => {
+  const url = localStorage.getItem("imageUrl");
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -19,7 +20,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img
-              src="https://lh3.googleusercontent.com/-ndtbkpvy4VU/AAAAAAAAAAI/AAAAAAAAAAA/AN6ncHjYOyBPEJWDWDGmcx6VIm6L8PbMCQ/photo.jpg?sz=46"
+              src={url}
               alt="/"
               className="avatar"
             />

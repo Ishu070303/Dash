@@ -18,8 +18,10 @@ const LoginPage = () => {
    });
   }
   useEffect(() => {
-    setValue(localStorage.getItem("email"))
+    setValue(localStorage.getItem("email"));
+    localStorage.setItem("imageUrl", data.user.photoURL);
   })
+  
 
   return (
    <>
