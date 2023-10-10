@@ -26,7 +26,8 @@ const LoginPage = () => {
   return (
    <>
    <div className='flex flex-row'>
-      <div className='basis-1/2 bg-[#4285F4] h-screen flex justify-center left-side'>
+      <div className='basis-1/2 bg-[#4285F4] h-screen flex justify-center relative'>
+        <div className='triangle'></div>
         <div className='w-[90%] h-[90%] m-auto'>
         <h4 style={{fontFamily: 'Poppins'}} className='text-2xl font-bold text-white'>LOGO</h4>
         <div className='flex justify-center mt-56'>
