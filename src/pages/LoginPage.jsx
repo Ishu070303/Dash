@@ -6,7 +6,7 @@ import { signInWithPopup } from 'firebase/auth';
 
 import google from '../images/google.png';
 import apple from '../images/apple.png';
-import Dashboard  from '../pages/Dashboard';
+import { Navigate } from 'react-router-dom';
 
 
 const LoginPage = () => {
@@ -46,8 +46,8 @@ const LoginPage = () => {
             <div className='flex gap-x-5'>
                 <div className='flex items-center w-48 justify-evenly p-1'>
                   <img src={google} alt='google' className='w-3 h-3'  />
-                 { value ? <Dashboard /> : 
-                  <button style = {{fontFamily: 'Montserrat'}} className='text-xs font-normal text-neutral-400'>
+                 { value ? <Navigate to={'/dashboard'} /> : 
+                  <button style = {{fontFamily: 'Montserrat'}} className='text-xs font-normal text-neutral-400' onClick={handleClick}>
                     Sign In with Google
                   </button>}
                 </div>
